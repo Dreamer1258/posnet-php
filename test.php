@@ -9,12 +9,9 @@ require_once 'autoload.php';
 
 try {
     $posnet = new Posnet();
-//    $posnet->setConnector(new TcpSocketConnector('localhost', 8080));
-    $posnet->setConnector(new TcpSocketConnector('91.90.188.5', 1024));
+    $posnet->setConnector(new TcpSocketConnector('localhost', 8080));
     $posnet->connect();
     print_r($posnet->getInfo());
-
-//    $posnet->printDocument();
 
     $posnet->disconnect();
 }
